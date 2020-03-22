@@ -6,6 +6,11 @@ namespace FileAndFileInfo
     {
         static void Main(string[] args)
         {
+            /* It is more convenient to use static methods, but everytime you use them,
+            the Operating System does some security checking, that can have an effect
+            on performance. To avoid this, it's more effecient to create a FileInfo object
+            and call the instance methods on the object */
+
             // File provides static methods.
             var path = @"C:\somefile.jpg";
 
