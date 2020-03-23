@@ -13,23 +13,24 @@ namespace FileAndFileInfoExercise
             }
             return longestWord;
         }
+        
+        private static string GetFileInformation(string content)
+        {
+            var path = @"C:\Users\camer\Projects\Core\Refresher_C-Sharp_Beginner\Files\FileAndFileInfoExercise\FileToRead.txt";
+            return File.ReadAllText(path);
+        }
         private static int NumberOfWords(int count, string content)
         {
             foreach (var word in content.Split(' '))
                 count++;
             return count;
         }
-        private static void GetFileInformation(string content)
-        {
-            var path = @"C:\Users\camer\Projects\Core\Refresher_C-Sharp_Beginner\Files\FileAndFileInfoExercise\FileToRead.txt";
-            content = File.ReadAllText(path);
-        }
         static void Main(string[] args)
         {
             /* Write a program that reads a text file and displays the number of words. */
             var count = 0;
             var content = string.Empty;
-            GetFileInformation(content);
+            content = GetFileInformation(content);
             count = NumberOfWords(count, content);
             System.Console.WriteLine(count);
 
