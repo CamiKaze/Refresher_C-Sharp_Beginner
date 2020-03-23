@@ -11,7 +11,6 @@ namespace DirectoryAndDirectoryInfo
             the performance of your application. To avoid the performance issue, it is
             more effecient to create a DirectoryInfo object and call the instance methods
             on that object */
-            
             Directory.CreateDirectory(@"c:\temp\folder1\asd");
             Directory.Delete(@"c:\temp\", true);
 
